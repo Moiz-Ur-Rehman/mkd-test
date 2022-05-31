@@ -2086,6 +2086,11 @@ function checkAllergie() {
 }
 function terminateQuiz() {
   $(".terminate").addClass("terminated");
+  var sec = 5;
+  setInterval(function () {
+    $(".terminate #timer").html(sec);
+    --sec;
+  }, 1000);
   setTimeout(function () {
     window.location.href = "/";
   }, 5000);
